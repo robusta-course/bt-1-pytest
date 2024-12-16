@@ -6,9 +6,10 @@ pipeline {
                 script {
                     sh """
                     #sudo apt-get install python3-pip python3.12-venv -y
-                    sudo python3 -m venv .env
-                    ls -al .env/bin/active
-                    . .env/bin/active
+                    mkdir venv
+                    sudo python3 -m venv venv
+                    ls -al venv/bin/active
+                    . venv/bin/active
                     sudo pip install -r requirements.txt
                     """
                 }
