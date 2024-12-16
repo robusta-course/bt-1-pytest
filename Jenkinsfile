@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    sudo apt-get install python3-pip python3.12-venv -y
+                    #sudo apt-get install python3-pip python3.12-venv -y
                     sudo mkdir .env
                     sudo python3 -m venv .env
                     . .env/bin/active
