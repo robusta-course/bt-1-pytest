@@ -5,10 +5,10 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    apt-get install python3-pip
-                    python3 -m venv .env
-                    source .env/bin/active
-                    pip install -r requirements.txt
+                    sudo apt-get install python3-pip
+                    sudo python3 -m venv .env
+                    sudo source .env/bin/active
+                    sudo pip install -r requirements.txt
                     '''
                 }
             }
