@@ -4,7 +4,12 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    sh 'pip install -r requirements.txt'
+                    sh '''
+                    apt-get install python3-pip
+                    python3 -m venv .env
+                    source .env/bin/active
+                    pip install -r requirements.txt
+                    '''
                 }
             }
         }
