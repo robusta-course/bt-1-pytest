@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    sudo apt-get install python3-pip
+                    sudo apt-get install python3-pip python3.12-venv -y
                     sudo python3 -m venv .env
                     sudo source .env/bin/active
                     sudo pip install -r requirements.txt
