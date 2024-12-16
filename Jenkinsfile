@@ -8,6 +8,7 @@ pipeline {
                     #/bin/bash
                     #sudo apt-get install python3-pip python3.12-venv -y
                     sudo python3 -m venv .env
+                    ls -al
                     . .env/bin/active
                     sudo pip install -r requirements.txt
                     '''
