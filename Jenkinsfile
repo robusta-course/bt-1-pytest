@@ -3,15 +3,10 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                script {
-                    sh """
-                    #sudo apt-get install python3-pip python3.12-venv -y
-                    mkdir venv || true
-                    sudo python3 -m venv venv
-                    ls -al venv/bin/activate
-                    . venv/bin/activate
+                withPythonEnv('Python3') {
+                    sh '''
                     pip install -r requirements.txt
-                    """
+                    '''
                 }
             }
         }
