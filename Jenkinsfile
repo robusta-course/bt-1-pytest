@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                script {
+                withPythonEnv('python3') {
                     sh 'python3 -m pytest tests/'
                 }
             }
