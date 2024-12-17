@@ -4,9 +4,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 withPythonEnv('Python3') {
-                    sh '''
-                    pip install -r requirements.txt
-                    '''
+                    sh 'pip install -r requirements.txt'
                 }
             }
         }
