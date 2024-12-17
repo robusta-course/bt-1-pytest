@@ -11,7 +11,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    sh 'pytest tests/'
+                    sh 'python3 -m pytest tests/'
                 }
             }
         }
